@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
  
-function Menu(props){
+function Navbar(){
     return <nav>
         <ul>
             <li><Link to="/">Accueil</Link></li>
@@ -9,4 +9,4 @@ function Menu(props){
         </ul>
     </nav>
 }
-export default Menu;
+export default Navbar;

@@ -1,7 +1,7 @@
-import Menu from "../components/navbar";
+import Navbar from "../components/Navbar";
 
 function About(){
-    return Menu();
+    return Navbar();
 }
 
 export default About;

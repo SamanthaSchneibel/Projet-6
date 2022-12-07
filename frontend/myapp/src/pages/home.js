@@ -1,8 +1,7 @@
-import Menu from "../components/navbar";
+import Navbar from "../components/Navbar";
 
 function Home(){
-    return Menu();
+    return Navbar();
 }
-
 
 export default Home
