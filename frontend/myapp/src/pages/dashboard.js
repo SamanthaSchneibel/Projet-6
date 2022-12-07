@@ -1,5 +1,5 @@
-function dashboard(props){
+function Dashboard(props){
     return <h1>dashboard</h1>;
 }
 
-export default dashboard;
+export default Dashboard;

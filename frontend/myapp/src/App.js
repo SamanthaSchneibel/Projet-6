@@ -7,20 +7,20 @@ import {
   Route
 } from "react-router-dom";
 
+
 function App(props){
   return <Router>
       <Switch>
-        <Route exact path="/"> {/*ici on met l'URL dans le navigateur*/}
-          <Home /> {/*ici on donne la page à afficher en fonction de cette URL*/}
+        <Route exact path="/">
+          <Home />
         </Route>
-        <Route path="/about">
+        <Route path="/About">
           <About />
         </Route>
-        <Route path="/dashboard">
+        <Route path="/Dashboard">
           <Dashboard />
         </Route>
       </Switch>
   </Router>
 }
-
 export default App;

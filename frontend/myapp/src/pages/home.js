@@ -1,5 +1,5 @@
-function home(props){
+function Home(props){
     return <h1>Acceuil</h1>;
 }
 
-export default home;
+export default Home;
