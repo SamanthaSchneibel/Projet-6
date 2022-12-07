@@ -1,5 +1,6 @@
-function Dashboard(props){
-    return <h1>dashboard</h1>;
-}
+import Menu from "../components/navbar";
 
+function Dashboard(){
+    return Menu();
+}
 export default Dashboard;

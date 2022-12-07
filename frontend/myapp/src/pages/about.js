@@ -1,5 +1,7 @@
-function About(props){
-    return <h1>about</h1>;
+import Menu from "../components/navbar";
+
+function About(){
+    return Menu();
 }
 
 export default About;

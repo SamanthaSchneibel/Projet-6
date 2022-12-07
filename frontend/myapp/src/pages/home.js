@@ -1,5 +1,8 @@
-function Home(props){
-    return <h1>Acceuil</h1>;
+import Menu from "../components/navbar";
+
+function Home(){
+    return Menu();
 }
 
-export default Home;
+
+export default Home

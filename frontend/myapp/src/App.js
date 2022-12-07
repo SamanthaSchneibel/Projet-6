@@ -23,4 +23,5 @@ function App(props){
       </Switch>
   </Router>
 }
+
 export default App;
