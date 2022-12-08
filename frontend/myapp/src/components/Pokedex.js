@@ -1,9 +1,13 @@
+import { useEffect, useState } from "react";
 import { getAll } from "../api/pokedexapi"
 
-export function Pokedex(useState, useEffect) {
+function Pokedex() {
     const [setPokedex] = useState([]);
     useEffect(() => {
         const addToPokedex = getAll();
         setPokedex(addToPokedex);
-    }, [])
+    })
+    return <h1>Pokedex</h1>
 };
+
+export default Pokedex;
