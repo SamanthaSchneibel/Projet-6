@@ -11,12 +11,12 @@ function PokemonHome() {
             .catch(error => console.error("Erreur avec notre API :", error.message));
     }, []);
     return <div className="pokemon-list">
-        <div class="flex"> {
+        <div className="flex"> {
             pokemons.map((pokemon, key) => {
                 return <div key={key} className="bloc-pokemon">
-                    {/* <img className="avatar" src={pokemon.img} /> */}
+                    <img className="avatar" src={pokemon.img} alt="" />
                     <h2>{pokemon.name}</h2>
-                    <button onClick={() => addToPokedex(pokemon.name)}>Capturer !</button>
+                    <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
                 </div>
             })}
         </div>

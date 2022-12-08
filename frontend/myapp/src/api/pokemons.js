@@ -13,7 +13,7 @@ export const getAll = async () => {
 }
 
 export const addToPokedex = async () => {
-    const response = await fetch(
+    const responsePoke = await fetch(
         'http://localhost:4444/pokedex/post', {
         method: 'POST',
         headers: {
@@ -22,6 +22,6 @@ export const addToPokedex = async () => {
         }
     }
     )
-    const pokemons = await response.json()
+    const pokemons = await responsePoke.json()
     return pokemons
 }
