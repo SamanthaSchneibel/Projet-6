@@ -14,7 +14,7 @@ function Pokedex() {
         <div className="flex"> {
             pokemons.map((key) => {
                 return <div key={key} className="bloc-pokemon">
-                    {/* <img className="avatar" src={pokemon.img} /> */}
+                    <img className="avatar" src={addToPokedex.img} alt=""/>
                     <h2>{addToPokedex}</h2>
                 </div>
             })}
