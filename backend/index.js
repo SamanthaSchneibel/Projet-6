@@ -1,3 +1,4 @@
+var cors = require('cors')
 const express = require("express");
 const dbo = require("./db/db");
 const app = express();
@@ -6,7 +7,7 @@ const bodyParser = require('body-parser');
 const db = require("./db/db");
 const jsonParser = bodyParser.json();
 
-
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }));
 
 dbo.connectToServer();

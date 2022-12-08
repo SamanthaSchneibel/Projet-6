@@ -1,9 +1,9 @@
 import Navbar from "../components/Navbar";
 import Pokedex from "../components/Pokedex";
 
-function About(){
+function PokedexPage(){
     return <div><Navbar/>
-    <Pokedex/></div> ;
+    <Pokedex/> </div>;
 }
 
-export default About;
+export default PokedexPage;

@@ -7,7 +7,7 @@ function Pokedex() {
         const addToPokedex = getAll();
         setPokedex(addToPokedex);
     })
-    return <h1>Pokedex</h1>
+    return <h1>Vos pokemon !</h1>
 };
 
 export default Pokedex;

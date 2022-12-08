@@ -1,5 +1,5 @@
 import Home from "./pages/Home";
-import About from "./pages/About";
+import PokedexPage from "./pages/PokedexPage";
 import Dashboard from "./pages/Dashboard";
 import {
   BrowserRouter as Router,
@@ -14,8 +14,8 @@ function App(){
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/About">
-          <About />
+        <Route path="/Pokedex">
+          <PokedexPage />
         </Route>
         <Route path="/Dashboard">
           <Dashboard />
