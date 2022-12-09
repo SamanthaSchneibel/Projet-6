@@ -1,5 +1,5 @@
 import PokemonHome from "../components/PokemonHome";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 
 function Home(props) {
     return <div>

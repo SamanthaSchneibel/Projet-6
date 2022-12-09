@@ -1,6 +1,6 @@
-import Home from "./pages/Home";
+import Home from "./pages/home";
 import PokedexPage from "./pages/PokedexPage";
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./pages/dashboard";
 import {
   BrowserRouter as Router,
   Switch,

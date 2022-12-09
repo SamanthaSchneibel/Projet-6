@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 import Pokedex from "../components/Pokedex";
 
 function PokedexPage(){
