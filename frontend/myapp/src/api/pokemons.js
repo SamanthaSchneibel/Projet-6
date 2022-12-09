@@ -22,6 +22,6 @@ export const addToPokedex = async () => {
         }
     }
     )
-    const pokemons = await responsePoke.json()
-    return pokemons
+    const pokemonadd = await responsePoke.json()
+    return pokemonadd
 }

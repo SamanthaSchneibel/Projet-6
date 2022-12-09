@@ -1,21 +1,20 @@
 import { useEffect, useState } from "react";
-import { getAll } from "../api/pokedexapi"
-import { addToPokedex } from "../api/pokemons";
+import { addedpokemon } from "../api/pokedexapi";
 
 function Pokedex() {
     const [pokemons, setPokemons] = useState([]);
     useEffect(() => {
-        const addToPokedex = getAll();
-        addToPokedex
+        const recupokemon = addedpokemon();
+        recupokemon
             .then(result => setPokemons(result))
             .catch(error => console.error("Erreur avec notre API :", error.message));
     }, []);
-    return <div className="pokemon-pokedex">
+    return <div className="pokemon-list">
         <div className="flex"> {
-            pokemons.map((key) => {
+            pokemons.map((pokemon, key) => {
                 return <div key={key} className="bloc-pokemon">
-                    <img className="avatar" src={addToPokedex.img} alt=""/>
-                    <h2>{addToPokedex}</h2>
+                    <img className="avatar" src={addedpokemon.img} alt="" />
+                    <h2>{addedpokemon.name}</h2>
                 </div>
             })}
         </div>
