@@ -52,7 +52,7 @@ app.post('/pokemon/update', jsonParser, (req, res) => {
     const dbConnect = dbo.getDb();
     const body = req.body;
     console.log('Got body:', body);
-    dbConnect.collection("Pokemon").updateOne({num:body.num}, {$set:{name:body.newname , type:body.newtype}})
+    dbConnect.collection("Pokemon").updateOne({ num: body.num }, { $set: { name: body.newname, type: body.newtype } })
     res.json(body);
 });
 
@@ -102,7 +102,7 @@ app.post('/type/update', jsonParser, (req, res) => {
     const dbConnect = dbo.getDb();
     const body = req.body;
     console.log('Got body:', body);
-    dbConnect.collection("TypesPokemon").updateOne({type:body.type}, {$set:{type:body.newtype}})
+    dbConnect.collection("TypesPokemon").updateOne({ type: body.type }, { $set: { type: body.newtype } })
     res.json(body);
 });
 
@@ -151,8 +151,13 @@ app.post('/pokedex/update', jsonParser, (req, res) => {
     const dbConnect = dbo.getDb();
     const body = req.body;
     console.log('Got body:', body);
-    dbConnect.collection("Pokedex").updateOne({name:body._id}, {$set:{name:body.newname}})
-    res.json(body);
+    dbConnect.collection("Pokedex").updateOne({ _id: body._id }, { $set: { name: body.newname } }).then(function (result, err) {
+        if (err) {
+            res.status(400).send(err.message);
+        } else {
+            res.json(result);
+        }
+    });
 });
 
 //pour supprimer un pokemon qu'on a attrapé dans la bdd (relâcher)

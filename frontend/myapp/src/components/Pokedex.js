@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { addedpokemon } from "../api/pokedexapi";
-import { updatepokemon } from "../api/pokedexapi";
+import { addedpokemon, updatepokemon, deletepokemon } from "../api/pokedexapi";
 
 function Pokedex() {
     const [pokemons, setPokemons] = useState([]);
@@ -15,8 +14,10 @@ function Pokedex() {
             pokemons.map((pokemon, key) => {
                 return <div key={key} className="bloc-pokemon">
                     <img className="avatar" src={pokemon.img} alt="" />
-                    <h2>ID: {pokemon._id} Numéro: {pokemon.num} Nom: {pokemon.name} Type: {pokemon.type}</h2>
-                    <button onClick={() => updatepokemon(pokemon)}> Modifier nom:</button>
+                    <h2>{pokemon._id}<br/>Numéro du pokedex: {pokemon.num} <br/>Nom: {pokemon.name} <br/>Type: {pokemon.type}</h2>
+                    <input type="text" id={key} name="Nom"/>
+                    <button onClick={() => updatepokemon(pokemon, key)}>Donner un surnom:</button>
+                    <button onClick={() => deletepokemon(pokemon)}>Supprimer le pokemon:</button>
                 </div>
             })}
         </div>
