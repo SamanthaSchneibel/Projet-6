@@ -15,7 +15,7 @@ function PokemonHome() {
             pokemons.map((pokemon, key) => {
                 return <div key={key} className="bloc-pokemon">
                     <img className="avatar" src={pokemon.img} alt="" />
-                    <h2>{pokemon.name}</h2>
+                    <h2>{pokemon.name} {pokemon.type}</h2>
                     <button onClick={() => addToPokedex(pokemon)}>Capturer !</button>
                 </div>
             })}

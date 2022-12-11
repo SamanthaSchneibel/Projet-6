@@ -147,6 +147,14 @@ app.post('/pokedex/post', jsonParser, (req, res) => {
     });
 });
 
+app.post('/pokedex/update', jsonParser, (req, res) => {
+    const dbConnect = dbo.getDb();
+    const body = req.body;
+    console.log('Got body:', body);
+    dbConnect.collection("Pokedex").updateOne({name:body._id}, {$set:{name:body.newname}})
+    res.json(body);
+});
+
 //pour supprimer un pokemon qu'on a attrapé dans la bdd (relâcher)
 app.delete('/pokedex/delete', jsonParser, (req, res) => {
     const dbConnect = dbo.getDb();
