@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAll } from "../api/pokemons";
-import { deletepokemonDash, updatepokemonDash } from "../api/dashboardapi";
+import { deletepokemonDash, postpokemonDash, updatepokemonDash } from "../api/dashboardapi";
 
 function Dashboardpoke() {
     const [pokemons, setPokemons] = useState([]);
