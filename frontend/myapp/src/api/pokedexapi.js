@@ -22,7 +22,7 @@ export const updatepokemon = async (pokemon, newname) => {
         }
         , body: JSON.stringify({
             '_id': pokemon._id,
-            'newname': document.getElementById(newname).value
+            'name': document.getElementById(newname).value
         })
     }
     )
