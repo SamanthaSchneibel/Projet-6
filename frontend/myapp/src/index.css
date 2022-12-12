@@ -16,3 +16,23 @@ nav .left{
 nav .right{
   margin-right: 100px;
 }
+
+h1{
+  text-align: center;
+  color: #FAFAFA;
+  text-transform: uppercase;
+}
+
+h2{
+  color: #FAFAFA;
+}
+
+.blocpkm img{
+  height: 250px;
+  width: 250px;
+}
+
+.blocpkm .pokeball{
+  height: 50px;
+  width: 50px;
+}
