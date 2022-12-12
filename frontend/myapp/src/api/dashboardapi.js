@@ -39,7 +39,7 @@ export const deletepokemonDash = async (pokemon) => {
             'Content-Type': 'application/json'
         }
         , body: JSON.stringify({
-            '_id': pokemon._id,
+            '_id': pokemon._id
         })
     }
     )
@@ -54,6 +54,14 @@ export const postpokemonDash = async (pokemon) => {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
+        }
+        , body: {
+            'num': pokemon.num,
+            'name': pokemon.name,
+            'type': pokemon.type,
+            'img1': pokemon.img1,
+            'img2': pokemon.img2,
+            'description': pokemon.description
         }
     }
     )
