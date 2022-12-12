@@ -52,7 +52,7 @@ app.post('/pokemon/update', jsonParser, (req, res) => {
     const dbConnect = dbo.getDb();
     const body = req.body;
     console.log('Got body:', body);
-    dbConnect.collection("Pokemon").updateOne({ num: body.num }, { $set: { name: body.newname, type: body.newtype } })
+    dbConnect.collection("Pokemon").updateOne({ _id: body._id }, { $set: { name: body.newname } })
     res.json(body);
 });
 
@@ -60,7 +60,7 @@ app.post('/pokemon/update', jsonParser, (req, res) => {
 app.delete('/pokemon/delete', jsonParser, (req, res) => {
     const dbConnect = dbo.getDb();
     const body = req.body;
-    dbConnect.collection("Pokemon").deleteOne(body)({_id: body._id}).then(function (result, err) {
+    dbConnect.collection("Pokemon").deleteOne(body).then(function (result, err) {
         if (err) {
             res.status(400).send(err.message);
         } else {
