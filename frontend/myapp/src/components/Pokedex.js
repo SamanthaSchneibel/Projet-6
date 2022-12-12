@@ -10,9 +10,10 @@ function Pokedex() {
             .catch(error => console.error("Erreur avec notre API :", error.message));
     }, []);
     return <div className="pokemon-list">
+        <img className="background-pc" src="https://pixelmongenerations.com/wiki/images/9/9e/PC_Background_Forest.png"></img>
         <div className="flex"> {
             pokemons.map((pokemon, key) => {
-                return <div key={key} className="bloc-pokemon">
+                return <div key={key} className="bloc-pokedex">
                     <img className="avatar" src={pokemon.img1} alt="" />
                     <img className="avatar-pixel" src={pokemon.img2} alt="" />
                     <img className="type" src={pokemon.type} alt="" />

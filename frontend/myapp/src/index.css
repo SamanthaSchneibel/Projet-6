@@ -20,6 +20,8 @@ nav div ul li{
 }
 
 nav div ul li a{
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
   text-decoration: none;
   color: #FAFAFA;
   font-size: 40px;
@@ -27,7 +29,7 @@ nav div ul li a{
 
 nav div ul li a:hover{
   text-decoration: none;
-  color: #424242;
+  color: #db3646;
   font-size: 40px;
 }
 
@@ -68,4 +70,8 @@ h2{
 
 .bloc-pokemon button{
   text-decoration: none;
+}
+
+.background-pc img{
+  text-align: center;
 }
