@@ -55,14 +55,14 @@ export const postpokemonDash = async (pokemon) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         }
-        , body: {
+        , body: JSON.stringify({
             'num': pokemon.num,
             'name': pokemon.name,
             'type': pokemon.type,
             'img1': pokemon.img1,
             'img2': pokemon.img2,
             'description': pokemon.description
-        }
+        })
     }
     )
     const pokemons = await response.json()
