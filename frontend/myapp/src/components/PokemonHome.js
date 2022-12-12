@@ -13,10 +13,10 @@ function PokemonHome() {
     return <div className="pokemon-list">
         <div className="flex"> {
             pokemons.map((pokemon, key) => {
-                return <div key={key} className="bloc-pokemon" class="blocpkm">
+                return <div key={key} className="bloc-pokemon">
                     <img className="avatar" src={pokemon.img1} alt="" />
                     <h2>{pokemon.name}</h2>
-                    <button onClick={() => addToPokedex(pokemon)}><img class="pokeball" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"/></button>
+                    <button type="button" class="btn btn-outline-danger" onClick={() => addToPokedex(pokemon)}><img className="pokeball" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"/></button>
                 </div>
             })}
         </div>
