@@ -9,12 +9,13 @@ nav{
   z-index: 9999;
 }
 
-nav .left{
-  margin-left: 100px;
+nav .navbar-brand{
+  color: #FAFAFA;
+  justify-content: center;
 }
 
-nav .right{
-  margin-right: 100px;
+nav .nav-link{
+  color: #FAFAFA;
 }
 
 h1{
