@@ -38,9 +38,9 @@ export const deletepokemon = async (pokemon) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         }
-        // , body: JSON.stringify({
-        //     '_id': pokemon._id,
-        // })
+        , body: JSON.stringify({
+            '_id': pokemon._id,
+        })
     }
     )
     const pokemons = await response.json()
