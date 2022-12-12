@@ -22,10 +22,12 @@ export const addToPokedex = async (pokemon) => {
             'Content-Type': 'application/json'
         }
         ,body: JSON.stringify({
-            'img': pokemon.img,
+            'img1': pokemon.img1,
+            'img2': pokemon.img2,
+            'type': pokemon.type,
             'num': pokemon.num,
             'name': pokemon.name,
-            'type': pokemon.type,
+            'description': pokemon.description
         })
     }
     )

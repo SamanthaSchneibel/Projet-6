@@ -13,8 +13,10 @@ function Pokedex() {
         <div className="flex"> {
             pokemons.map((pokemon, key) => {
                 return <div key={key} className="bloc-pokemon">
-                    <img className="avatar" src={pokemon.img} alt="" />
-                    <h2>{pokemon._id}<br/>Numéro du pokedex: {pokemon.num} <br/>Nom: {pokemon.name} <br/>Type: {pokemon.type}</h2>
+                    <img className="avatar" src={pokemon.img1} alt="" />
+                    <img className="avatar-pixel" src={pokemon.img2} alt="" />
+                    <img className="type" src={pokemon.type} alt="" />
+                    <h2>{pokemon._id}<br/>Numéro du pokedex: {pokemon.num} <br/>Nom: {pokemon.name} <br/> Description: {pokemon.description}</h2>
                     <input type="text" id={key} name="Nom"/>
                     <button onClick={() => updatepokemon(pokemon, key)}>Donner un surnom:</button>
                     <button onClick={() => deletepokemon(pokemon)}>Supprimer le pokemon:</button>
