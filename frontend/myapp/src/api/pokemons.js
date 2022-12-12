@@ -27,7 +27,7 @@ export const addToPokedex = async (pokemon) => {
             'type': pokemon.type,
             'num': pokemon.num,
             'name': pokemon.name,
-            'description': pokemon.description
+            'description': pokemon.description 
         })
     }
     )
