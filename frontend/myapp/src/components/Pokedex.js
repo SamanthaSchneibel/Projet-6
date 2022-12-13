@@ -10,7 +10,7 @@ function Pokedex() {
             .catch(error => console.error("Erreur avec notre API :", error.message));
     }, []);
     return <div className="row text-center">
-        <div className="col-lg-3">
+        <div className="div1 col-lg-3">
             <div className="flex"> {
                 pokemons.map((pokemon, key) => {
                     return <div key={key} className="bloc-pokedex">
@@ -30,20 +30,15 @@ function Pokedex() {
                 })}
             </div>
         </div>
-        <div className="col-lg-6">
-            <div className="container">
+        <div className="div2 col-lg-6">
                 <h1>Vos pokemons dans le pc</h1>
-            </div>
-            <div className="background-pc">
-                <img className="container" src="https://pixelmongenerations.com/wiki/images/9/9e/PC_Background_Forest.png"></img>
-            </div>
-            <div className="flex"> {
-                pokemons.map((pokemon, key) => {
-                    return <div key={key} className="bloc-pokedex">
-                        <img type="button" className="avatar-pixel" src={pokemon.img2} alt="" />
-                    </div>
-                })}
-            </div>
+                <div className="pixel"> {
+                    pokemons.map((pokemon, key) => {
+                        return <div key={key} className="bloc-pokedex">
+                            <img type="button" className="avatar-pixel" src={pokemon.img2} alt="" />
+                        </div>
+                    })}
+                </div>
         </div>
     </div >;
 };
