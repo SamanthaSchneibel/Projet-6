@@ -85,8 +85,19 @@ p{
 }
 
 /*for the pokedex page*/
-.container{
+.pokedex-list{
+  background-image: url("https://pixelmongenerations.com/wiki/images/9/9e/PC_Background_Forest.png");
+  background-repeat: no-repeat;
   margin-top: 20px;
+}
+
+.container{
+  margin-top: 15px;
+  width: 825px;
+}
+
+.bloc-pokedex img{
+vertical-align: top;
 }
 
 .avatar{
@@ -108,10 +119,6 @@ p{
   background-color: #D9D9D9;
   border-radius: 10px;
   margin-left: 20px;
-}
-
-.background-avatar{
-  background-color: #424242;
 }
 
 .pokedex-list{
