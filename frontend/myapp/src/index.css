@@ -1,5 +1,5 @@
 body{
-  background-color: #424242;
+  background-color: #424242 !important;
 }
 
 /*for the navbar*/
@@ -40,8 +40,8 @@ nav div ul li img{
 }
 
 /*for all h1*/
-.container h1{
-  margin-top: 20px;
+h1{
+  margin-top: 20px !important;
   text-align: center;
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
@@ -85,12 +85,7 @@ p{
 }
 
 /*for the pokedex page*/
-.container{
-  margin-top: 10px;
-  width: 825px;
-}
-
-.col-lg-3{
+.div1{
   margin-top: 20px;
   background-color: #D9D9D9;
   border-radius: 10px;
@@ -98,7 +93,12 @@ p{
   margin-bottom: 400px;
 }
 
-
+.row-text-center .col-lg-3 .flex .infos{
+  height: 22px;
+  width: 105px;
+  border: none;
+  padding: 10px;
+}
 
 .background-avatar{
   background-color: #424242;
@@ -115,14 +115,13 @@ p{
   margin-bottom: 10px;
 }
 
+.div2{
+  background-image: url("https://pixelmongenerations.com/wiki/images/9/9e/PC_Background_Forest.png");
+  background-repeat: no-repeat;
+
+}
+
 .avatar-pixel{
   height: 100px;
   width: 100px;
-}
-
-.row-text-center .col-lg-3 .flex .infos{
-  height: 22px;
-  width: 105px;
-  border: none;
-  padding: 10px;
 }
