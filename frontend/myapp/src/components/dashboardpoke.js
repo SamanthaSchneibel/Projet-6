@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAll } from "../api/pokemons";
-import { deletepokemonDash, postpokemonDash, updatepokemonDash } from "../api/dashboardapi";
+import { deletepokemonDash, postpokemonDash, updatepokemondescDash, updatepokemonnameDash } from "../api/dashboardapi";
 import { useForm } from "react-hook-form";
 
 
@@ -27,7 +27,7 @@ export function Dashboardpoke() {
                     <img className="type2" src={pokemon.type2} alt="" />
                     <h2>{pokemon._id}<br />Numéro du pokedex: {pokemon.num} <br />Nom: {pokemon.name} <br /> Description: {pokemon.description}</h2>
                     <input type="text" id={key} name="Nom" />
-                    <button onClick={() =>  updatepokemonDash(pokemon, key)}>Changer le nom du pokemon</button>
+                    <button onClick={() =>  updatepokemonnameDash(pokemon, key)}>Changer le nom du pokemon</button>
                     <button onClick={() =>  deletepokemonDash(pokemon)}>Supprimer le pokemon</button>
                 </div>
             })}
