@@ -17,15 +17,15 @@ function Pokedex() {
                         <div className="background-avatar">
                             <img className="avatar" src={pokemon.img1} alt="" />
                         </div>
-                        <div className="">
+                        <div className="coucou">
                             <h3><br />{pokemon.name}{pokemon.num}</h3>
                             <img className="type" src={pokemon.type} alt="" />
                             <img className="type2" src={pokemon.type2} alt="" />
                         </div>
                         <p><br />{pokemon.description}<br /></p>
                         <input type="text" id={key} name="Nom"/>
-                        <button type="button" class="btn btn-outline-dark" onClick={() => updatepokemon(pokemon, key)}>Renommer</button>
-                        <button type="button" class="btn btn-outline-dark" onClick={() => deletepokemon(pokemon)}>Relâcher</button>
+                        <button type="button" className="btn btn-outline-dark" onClick={() => updatepokemon(pokemon, key)}>Renommer</button>
+                        <button type="button" className="btn btn-outline-dark" onClick={() => deletepokemon(pokemon)}>Relâcher</button>
                     </div>
                 })}
             </div>
