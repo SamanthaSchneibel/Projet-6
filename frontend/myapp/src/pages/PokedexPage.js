@@ -3,7 +3,9 @@ import Pokedex from "../components/Pokedex";
 
 function PokedexPage(){
     return <div><Navbar/>
-    <h1>Vos Pokemons dans le PC</h1>
+        <div className="container">
+            <h1>Vos pokemons dans le pc</h1>
+        </div>
     <Pokedex/> </div>;
 }
 

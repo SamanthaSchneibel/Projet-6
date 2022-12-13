@@ -45,10 +45,10 @@ export function Dashboardpoke() {
             .then(result => setPokemons(result))
             .catch(error => console.error("Erreur avec notre API :", error.message));
     }, []);
-    return <div className="pokemon-list">
+    return <div className="dashboard-list">
         <div className="flex"> {
             pokemons.map((pokemon, key) => {
-                return <div key={key} className="bloc-pokemon">
+                return <div key={key} className="bloc-dashboard">
                     <img className="avatar" src={pokemon.img1} alt="" />
                     <img className="avatar-pixel" src={pokemon.img2} alt="" />
                     <img className="type" src={pokemon.type} alt="" />

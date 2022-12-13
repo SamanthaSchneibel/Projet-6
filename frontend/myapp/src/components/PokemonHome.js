@@ -16,7 +16,7 @@ function PokemonHome() {
                 return <div key={key} className="bloc-pokemon">
                     <img className="avatar" src={pokemon.img1} alt="" />
                     <h2>{pokemon.name}</h2>
-                    <button type="button" class="btn btn-outline-danger" onClick={() => addToPokedex(pokemon)}><img className="pokeball" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"/></button>
+                    <button type="button" class="btn" onClick={() => addToPokedex(pokemon)}><img className="pokeball" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"/></button>
                 </div>
             })}
         </div>
