@@ -3,12 +3,13 @@ import { addedpokemon, updatepokemon, deletepokemon } from "../api/pokedexapi";
 
 function Pokedex() {
     const [pokemons, setPokemons] = useState([]);
+    const [count, setcount] = useState(0);
     useEffect(() => {
         const recupokemon = addedpokemon();
         recupokemon
             .then(result => setPokemons(result))
             .catch(error => console.error("Erreur avec notre API :", error.message));
-    }, []);
+    }, [count]);
     return <div className="row text-center">
         <div className="col-lg-3">
             <div className="flex"> {
@@ -24,8 +25,8 @@ function Pokedex() {
                         </div>
                         <p><br />{pokemon.description}<br /></p>
                         <input type="text" id={key} name="Nom" />
-                        <button type="button" className="btn btn-outline-dark" onClick={() => updatepokemon(pokemon, key)}>Renommer</button>
-                        <button type="button" className="btn btn-outline-dark" onClick={() => deletepokemon(pokemon)}>Relâcher</button>
+                        <button type="button" className="btn btn-outline-dark" onClick={() => {updatepokemon(pokemon, key); setcount(count+1)}}>Renommer</button>
+                        <button type="button" className="btn btn-outline-dark" onClick={() => {deletepokemon(pokemon); setcount(count+1)}}>Relâcher</button>
                     </div>
                 })}
             </div>

@@ -11,12 +11,13 @@ export function Dashboardpoke() {
         postpokemonDash(data)
     }
     const [pokemons, setPokemons] = useState([]);
+    const [count, setcount] = useState(0);
     useEffect(() => {
         const gotchapokemon = getAll();
         gotchapokemon
             .then(result => setPokemons(result))
             .catch(error => console.error("Erreur avec notre API :", error.message));
-    }, []);
+    }, [count]);
     return <div className="dashboard-list">
         <div className="flex"> {
             pokemons.map((pokemon, key) => {
@@ -27,8 +28,8 @@ export function Dashboardpoke() {
                     <img className="type2" src={pokemon.type2} alt="" />
                     <h2>{pokemon._id}<br />Numéro du pokedex: {pokemon.num} <br />Nom: {pokemon.name} <br /> Description: {pokemon.description}</h2>
                     <input type="text" id={key} name="Nom" />
-                    <button onClick={() =>  updatepokemonnameDash(pokemon, key)}>Changer le nom du pokemon</button>
-                    <button onClick={() =>  deletepokemonDash(pokemon)}>Supprimer le pokemon</button>
+                    <button onClick={() =>  {updatepokemonnameDash(pokemon, key); setcount(count+1)}}>Changer le nom du pokemon</button>
+                    <button onClick={() =>  {deletepokemonDash(pokemon); setcount(count+1)}}>Supprimer le pokemon</button>
                 </div>
             })}
 
