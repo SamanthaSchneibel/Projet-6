@@ -119,6 +119,7 @@ p{
 .type{
   height: 22px;
   width: 105px;
+  border: none;
 }
 
 .type2{
