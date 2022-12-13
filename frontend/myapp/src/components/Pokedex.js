@@ -18,7 +18,7 @@ function Pokedex() {
                             <img className="avatar" src={pokemon.img1} alt="" />
                         </div>
                         <div className="">
-                            <h3><br />{pokemon.name}{pokemon.num}</h3><img className="type" src={pokemon.type} alt="" />
+                            <h3><br />{pokemon.name}{pokemon.num}</h3><img className="type" src={pokemon.type} alt="" /><img className="type2" src={pokemon.type2} alt="" />
                         </div>
                         <p><br />{pokemon.description}<br /></p>
                         <button type="button" class="btn btn-outline-dark" onClick={() => updatepokemon(pokemon, key)}>Renommer</button>
