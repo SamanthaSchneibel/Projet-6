@@ -86,11 +86,18 @@ p{
 
 /*for the pokedex page*/
 .div1{
-  margin-top: 20px;
   background-color: #D9D9D9;
   border-radius: 10px;
-  margin-left: 50px;
-  margin-bottom: 400px;
+}
+
+.div2{
+  background-color: #D9D9D9;
+  border-radius: 10px;
+}
+
+.div3{
+  background-color: #D9D9D9;
+  border-radius: 10px;
 }
 
 .avatar{

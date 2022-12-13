@@ -14,19 +14,43 @@ function Pokedex() {
             .then(result => setPokemons(result))
             .catch(error => console.error("Erreur avec notre API :", error.message));
     }, [count]);
-    return <Container>
+    return <Row>
         <h1>Vos pokemons dans le pc</h1>
-        <img className="background-pc" src="https://pixelmongenerations.com/wiki/images/9/9e/PC_Background_Forest.png"></img>
-        <Row className="div2 justify-content-md-center">
+        <Row className="justify-content-md-center">
             {
                 pokemons.map((pokemon, key) => {
-                    return <Col key={key} xs={{ order: 1 }}><div className="bloc-pokedex">
-                        <img type="button" className="avatar-pixel" src={pokemon.img2} alt="" />
-                    </div>
+                    return <Col key={key} xs lg="3">
+                        <div className="div1 text-center">
+                            <div className="bloc-pokedex">
+                                <img className="avatar" src={pokemon.img1} alt="" />
+                                <h3><br />{pokemon.name}{pokemon.num}</h3>
+                                <img className="type" src={pokemon.type} alt="" />
+                                <img className="type2" src={pokemon.type2} alt="" />
+                                <p><br />{pokemon.description}<br /></p>
+                                <input type="text" id={key} name="Nom" />
+                                <button type="button" className="btn btn-outline-dark" onClick={() => updatepokemon(pokemon, key)}>Renommer</button>
+                                <button type="button" className="btn btn-outline-dark" onClick={() => deletepokemon(pokemon)}>Relâcher</button>
+                            </div>
+                        </div>
                     </Col>
                 })}
+            {
+                pokemons.map((pokemon, key) => {
+                    return <Col key={key} xs lg="6">
+                        <div className="div2">
+                            <div className="bloc-pokedex">
+                                <img type="button" className="avatar-pixel" src={pokemon.img2} alt="" />
+                            </div>
+                        </div>
+                    </Col>
+                })}
+            <Col xs lg="3">
+                <div className="div3 text-center">
+                    <h3>Trier par</h3>
+                </div>
+            </Col>
         </Row>
-    </Container>
+    </Row>
 };
 
 export default Pokedex;
