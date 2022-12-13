@@ -14,11 +14,9 @@ function Pokedex() {
         <div className="flex"> {
             pokemons.map((pokemon, key) => {
                 return <div key={key} className="bloc-pokedex">
-                    <div className="infospkm">
-                        <div className="background-avatar">
+                    <div id="popup" className="overlay">
+                        <div className="popup bg-light">
                             <img className="avatar" src={pokemon.img1} alt="" />
-                        </div>
-                        <div className="background-other">
                             <img className="type" src={pokemon.type} alt="" />
                             <h2>{pokemon._id}<br/>Numéro du pokedex: {pokemon.num} <br/>Nom: {pokemon.name} <br/> Description: {pokemon.description}</h2>
                             <input type="text" id={key} name="Nom" required className="required text"/>
