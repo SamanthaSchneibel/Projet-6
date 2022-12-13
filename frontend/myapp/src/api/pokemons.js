@@ -25,6 +25,7 @@ export const addToPokedex = async (pokemon) => {
             'img1': pokemon.img1,
             'img2': pokemon.img2,
             'type': pokemon.type,
+            'type2': pokemon.type2,
             'num': pokemon.num,
             'name': pokemon.name,
             'description': pokemon.description 

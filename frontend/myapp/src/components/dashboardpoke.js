@@ -24,6 +24,7 @@ export function Dashboardpoke() {
                     <img className="avatar" src={pokemon.img1} alt="" />
                     <img className="avatar-pixel" src={pokemon.img2} alt="" />
                     <img className="type" src={pokemon.type} alt="" />
+                    <img className="type2" src={pokemon.type2} alt="" />
                     <h2>{pokemon._id}<br />Numéro du pokedex: {pokemon.num} <br />Nom: {pokemon.name} <br /> Description: {pokemon.description}</h2>
                     <input type="text" id={key} name="Nom" />
                     <button onClick={() => updatepokemonDash(pokemon, key)}>Changer le nom du pokemon</button>
