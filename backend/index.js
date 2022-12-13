@@ -39,6 +39,7 @@ app.get("/pokemon/get", function (req, res) {
 app.post('/pokemon/post', jsonParser, (req, res) => {
     const dbConnect = dbo.getDb();
     const body = req.body;
+    console.log(body);
     dbConnect.collection("Pokemon").insertOne(body).then(function (result, err) {
         if (err) {
             res.status(400).send(err.message);

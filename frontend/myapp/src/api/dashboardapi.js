@@ -1,4 +1,4 @@
-import { Createpoke } from "../components/dashboardpoke";
+import { pokemon } from "../components/dashboardpoke";
 
 export const getAll = async () => {
     const response = await fetch(
@@ -49,7 +49,7 @@ export const deletepokemonDash = async (pokemon) => {
     return pokemons
 }
 
-export const postpokemonDash = async (Createpoke) => {
+export const postpokemonDash = async (pokemon) => {
     const response = await fetch(
         'http://localhost:4444/pokemon/post', {
         method: 'POST',
@@ -58,12 +58,12 @@ export const postpokemonDash = async (Createpoke) => {
             'Content-Type': 'application/json'
         }
         , body: JSON.stringify({
-            'num': Createpoke.num,
-            'name': Createpoke.name,
-            'type': Createpoke.type,
-            'img1': Createpoke.img1,
-            'img2': Createpoke.img2,
-            'description': Createpoke.description
+            'num': pokemon.num,
+            'name': pokemon.name,
+            'type': pokemon.type,
+            'img1': pokemon.img1,
+            'img2': pokemon.img2,
+            'description': pokemon.description
         })
     }
     )
