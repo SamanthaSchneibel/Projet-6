@@ -2,6 +2,7 @@ body{
   background-color: #424242;
 }
 
+/*for the navbar*/
 nav{
   height: 90px;
   width: 100%;
@@ -38,6 +39,7 @@ nav div ul li img{
   height: 75px;
 }
 
+/*for all h1*/
 .container h1{
   margin-top: 20px;
   text-align: center;
@@ -48,11 +50,25 @@ nav div ul li img{
   border-radius: 10px;
 }
 
+/*for all h2*/
 h2{
   font-family: "Poppins", sans-serif;
   color: #FAFAFA;
 }
 
+/*for all h3*/
+h3{
+  font-family: "Poppins", sans-serif;
+  color: #424242;
+}
+
+/*for all paragraph*/
+p{
+  font-family: "Poppins", sans-serif;
+  color: #424242;
+}
+
+/*for the home page*/
 .bloc-pokemon{
   margin-top: 50px;
   text-align: center;
@@ -68,8 +84,9 @@ h2{
   width: 50px;
 }
 
-.bloc-pokemon button{
-  text-decoration: none;
+/*for the pokedex page*/
+.container{
+  margin-top: 20px;
 }
 
 .avatar{
