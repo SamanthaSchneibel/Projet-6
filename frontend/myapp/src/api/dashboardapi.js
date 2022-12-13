@@ -1,5 +1,3 @@
-import { pokemon } from "../components/dashboardpoke";
-
 export const getAll = async () => {
     const response = await fetch(
         'http://localhost:4444/pokemon/get', {
