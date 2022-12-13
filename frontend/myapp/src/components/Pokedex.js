@@ -7,12 +7,13 @@ import Col from 'react-bootstrap/Col';
 
 function Pokedex() {
     const [pokemons, setPokemons] = useState([]);
+    const [count, setcount] = useState(0);
     useEffect(() => {
         const recupokemon = addedpokemon();
         recupokemon
             .then(result => setPokemons(result))
             .catch(error => console.error("Erreur avec notre API :", error.message));
-    }, []);
+    }, [count]);
     return <Container>
         <h1>Vos pokemons dans le pc</h1>
         <img className="background-pc" src="https://pixelmongenerations.com/wiki/images/9/9e/PC_Background_Forest.png"></img>
