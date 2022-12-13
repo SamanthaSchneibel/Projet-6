@@ -49,7 +49,7 @@ export const deletepokemonDash = async (pokemon) => {
     return pokemons
 }
 
-export const postpokemonDash = async (pokemon) => {
+export const postpokemonDash = async (data) => {
     const response = await fetch(
         'http://localhost:4444/pokemon/post', {
         method: 'POST',
@@ -58,12 +58,13 @@ export const postpokemonDash = async (pokemon) => {
             'Content-Type': 'application/json'
         }
         , body: JSON.stringify({
-            'num': pokemon.num,
-            'name': pokemon.name,
-            'type': pokemon.type,
-            'img1': pokemon.img1,
-            'img2': pokemon.img2,
-            'description': pokemon.description
+            'num': data.num,
+            'name': data.name,
+            'type': data.type,
+            'type2': data.type2,
+            'description': data.description,
+            'img1': data.img1,
+            'img2': data.img2
         })
     }
     )

@@ -7,7 +7,7 @@ function Dashboard(){
     <h1>Dashboard</h1>
     <h2>Modifiez les pokemons !</h2>
     <Dashboardpoke/>
-    <Createpoke/>
+    {/* <Createpoke/> */}
     </div>;
 }
 export default Dashboard;
