@@ -12,7 +12,7 @@ export const getAll = async () => {
     return pokemons
 }
 
-export const updatepokemonDash = async (pokemon, newname) => {
+export const updatepokemonnameDash = async (pokemon, newname) => {
     const response = await fetch(
         'http://localhost:4444/pokemon/update', {
         method: 'POST',
