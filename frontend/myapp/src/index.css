@@ -85,24 +85,30 @@ p{
 }
 
 /*for the pokedex page*/
-.pokedex-list{
-  background-image: url("https://pixelmongenerations.com/wiki/images/9/9e/PC_Background_Forest.png");
-  background-repeat: no-repeat;
-  margin-top: 20px;
-}
-
 .container{
-  margin-top: 15px;
+  margin-top: 10px;
   width: 825px;
 }
 
-.bloc-pokedex img{
-vertical-align: top;
+.col-lg-3{
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  margin-left: 50px;
+}
+
+.background-avatar{
+  background-color: #424242;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-left: 120px;
+  margin-right: 120px;
 }
 
 .avatar{
   height: 200px;
   width: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .avatar-pixel{
