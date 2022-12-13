@@ -93,32 +93,11 @@ p{
   margin-bottom: 400px;
 }
 
-.row-text-center .col-lg-3 .flex .infos{
-  height: 22px;
-  width: 105px;
-  border: none;
-  padding: 10px;
-}
-
-.background-avatar{
-  background-color: #424242;
-  border-radius: 10px;
-  margin-top: 40px;
-  margin-left: 120px;
-  margin-right: 120px;
-}
-
 .avatar{
   height: 200px;
   width: 200px;
   margin-top: 10px;
   margin-bottom: 10px;
-}
-
-.div2{
-  background-image: url("https://pixelmongenerations.com/wiki/images/9/9e/PC_Background_Forest.png");
-  background-repeat: no-repeat;
-
 }
 
 .avatar-pixel{
