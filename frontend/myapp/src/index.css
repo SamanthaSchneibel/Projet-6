@@ -91,10 +91,14 @@ p{
 }
 
 .col-lg-3{
+  margin-top: 20px;
   background-color: #D9D9D9;
   border-radius: 10px;
   margin-left: 50px;
+  margin-bottom: 400px;
 }
+
+
 
 .background-avatar{
   background-color: #424242;
@@ -116,20 +120,9 @@ p{
   width: 100px;
 }
 
-.row-text-center .col-lg-3 .flex .coucou{
+.row-text-center .col-lg-3 .flex .infos{
   height: 22px;
   width: 105px;
   border: none;
   padding: 10px;
-}
-
-
-.infospkm{
-  background-color: #D9D9D9;
-  border-radius: 10px;
-  margin-left: 20px;
-}
-
-.pokedex-list{
-  display: flex;
 }
