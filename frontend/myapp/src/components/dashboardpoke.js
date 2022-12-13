@@ -27,8 +27,8 @@ export function Dashboardpoke() {
                     <img className="type2" src={pokemon.type2} alt="" />
                     <h2>{pokemon._id}<br />Numéro du pokedex: {pokemon.num} <br />Nom: {pokemon.name} <br /> Description: {pokemon.description}</h2>
                     <input type="text" id={key} name="Nom" />
-                    <button onClick={() => updatepokemonDash(pokemon, key)}>Changer le nom du pokemon</button>
-                    <button onClick={() => deletepokemonDash(pokemon)}>Supprimer le pokemon</button>
+                    <button onClick={() =>  updatepokemonDash(pokemon, key)}>Changer le nom du pokemon</button>
+                    <button onClick={() =>  deletepokemonDash(pokemon)}>Supprimer le pokemon</button>
                 </div>
             })}
 
