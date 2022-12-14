@@ -102,3 +102,9 @@ p{
   height: 100px;
   width: 100px;
 }
+
+.btn-outline-dark{
+  font-family: "Press Start 2P", cursive !important;
+  font-size: 10px !important;
+  margin: 5px !important;
+}
