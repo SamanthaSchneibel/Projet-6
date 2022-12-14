@@ -109,6 +109,10 @@ p{
   justify-content: center;
 }
 
+.bloc-pokedex{
+  margin-top: 10px;
+}
+
 .title-modif h2{
   text-align: center;
 }
