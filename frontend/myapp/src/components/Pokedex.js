@@ -42,11 +42,6 @@ function Pokedex() {
                             </div>
                         </div>
                 </div>
-                <div className="col-lg-3">
-                        <div className="bloc text-center">
-                            <h3>Trier par</h3>
-                        </div>
-                </div>
             </div>
         </Row>
     </Row>
