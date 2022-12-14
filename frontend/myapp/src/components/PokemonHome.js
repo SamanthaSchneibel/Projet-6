@@ -22,7 +22,7 @@ function PokemonHome() {
                     return <Col key={key} xs={12} md={6} lg={4}><div className="bloc-pokemon">
                         <img className="avatar" src={pokemon.img1} alt="" />
                         <h2>{pokemon.name}</h2>
-                        <button type="button" class="btn" onClick={() => addToPokedex(pokemon)}><img className="pokeball" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png" /></button>
+                        <button type="button" class="btn" onClick={() => addToPokedex(pokemon)}><img className="pokeball" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png" alt=""/></button>
                     </div>
                     </Col>
                 })}

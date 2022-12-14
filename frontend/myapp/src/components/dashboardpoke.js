@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAll } from "../api/pokemons";
-import { deletepokemonDash, postpokemonDash, updatepokemondescDash, updatepokemonnameDash } from "../api/dashboardapi";
+import { deletepokemonDash, postpokemonDash, updatepokemonnameDash } from "../api/dashboardapi";
 import { useForm } from "react-hook-form";
 
 
