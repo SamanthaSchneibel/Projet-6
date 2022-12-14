@@ -21,7 +21,7 @@ function Pokedex() {
                 <div className="col-lg-3">
                     {
                         pokemons.map((pokemon, key) => {
-                            return <div className="div1 text-center">
+                            return <div className="bloc text-center">
                                     <div className="bloc-pokedex">
                                         <img className="avatar" src={pokemon.img1} alt="" />
                                         <h3><br />{pokemon.name}{pokemon.num}</h3>
@@ -36,7 +36,7 @@ function Pokedex() {
                         })}
                 </div>
                 <div className="col-lg-6">
-                        <div className="div2">
+                        <div className="bloc">
                         <div className="bloc-pokedex">
                             {
                                 pokemons.map((pokemon, key) => {
@@ -46,7 +46,7 @@ function Pokedex() {
                         </div>
                 </div>
                 <div className="col-lg-3">
-                        <div className="div3 text-center">
+                        <div className="bloc text-center">
                             <h3>Trier par</h3>
                         </div>
                 </div>

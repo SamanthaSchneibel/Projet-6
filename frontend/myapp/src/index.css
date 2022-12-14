@@ -85,17 +85,7 @@ p{
 }
 
 /*for the pokedex page*/
-.div1{
-  background-color: #D9D9D9;
-  border-radius: 10px;
-}
-
-.div2{
-  background-color: #D9D9D9;
-  border-radius: 10px;
-}
-
-.div3{
+.bloc{
   background-color: #D9D9D9;
   border-radius: 10px;
 }
