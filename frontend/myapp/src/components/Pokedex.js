@@ -17,38 +17,40 @@ function Pokedex() {
     return <Row>
         <h1>Vos pokemons dans le pc</h1>
         <Row className="justify-content-md-center">
-            {
-                pokemons.map((pokemon, key) => {
-                    return <Col key={key} xs lg="3">
-                        <div className="div1 text-center">
-                            <div className="bloc-pokedex">
-                                <img className="avatar" src={pokemon.img1} alt="" />
-                                <h3><br />{pokemon.name}{pokemon.num}</h3>
-                                <img className="type" src={pokemon.type} alt="" />
-                                <img className="type2" src={pokemon.type2} alt="" />
-                                <p><br />{pokemon.description}<br /></p>
-                                <input type="text" id={key} name="Nom" />
-                                <button type="button" className="btn btn-outline-dark" onClick={() => updatepokemon(pokemon, key)}>Renommer</button>
-                                <button type="button" className="btn btn-outline-dark" onClick={() => deletepokemon(pokemon)}>Relâcher</button>
-                            </div>
-                        </div>
-                    </Col>
-                })}
-            {
-                pokemons.map((pokemon, key) => {
-                    return <Col key={key} xs lg="6">
-                        <div className="div2">
-                            <div className="bloc-pokedex">
-                                <img type="button" className="avatar-pixel" src={pokemon.img2} alt="" />
-                            </div>
-                        </div>
-                    </Col>
-                })}
-            <Col xs lg="3">
-                <div className="div3 text-center">
-                    <h3>Trier par</h3>
+            <div className="row">
+                <div className="col-lg-3">
+                    {
+                        pokemons.map((pokemon, key) => {
+                            return <div className="div1 text-center">
+                                    <div className="bloc-pokedex">
+                                        <img className="avatar" src={pokemon.img1} alt="" />
+                                        <h3><br />{pokemon.name}{pokemon.num}</h3>
+                                        <img className="type" src={pokemon.type} alt="" />
+                                        <img className="type2" src={pokemon.type2} alt="" />
+                                        <p><br />{pokemon.description}<br /></p>
+                                        <input type="text" id={key} name="Nom" />
+                                        <button type="button" className="btn btn-outline-dark" onClick={() => updatepokemon(pokemon, key)}>Renommer</button>
+                                        <button type="button" className="btn btn-outline-dark" onClick={() => deletepokemon(pokemon)}>Relâcher</button>
+                                    </div>
+                                </div>
+                        })}
                 </div>
-            </Col>
+                <div className="col-lg-6">
+                        <div className="div2">
+                        <div className="bloc-pokedex">
+                            {
+                                pokemons.map((pokemon, key) => {
+                                    return <img key={key} type="button" className="avatar-pixel" src={pokemon.img2} alt="" />
+                                })}
+                            </div>
+                        </div>
+                </div>
+                <div className="col-lg-3">
+                        <div className="div3 text-center">
+                            <h3>Trier par</h3>
+                        </div>
+                </div>
+            </div>
         </Row>
     </Row>
 };
