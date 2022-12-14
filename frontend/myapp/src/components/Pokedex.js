@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import { addedpokemon, updatepokemon, deletepokemon } from "../api/pokedexapi";
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
 
 function Pokedex() {
     const [pokemons, setPokemons] = useState([]);
@@ -29,8 +26,8 @@ function Pokedex() {
                                         <img className="type2" src={pokemon.type2} alt="" />
                                         <p><br />{pokemon.description}<br /></p>
                                         <input type="text" id={key} name="Nom" />
-                                        <button type="button" className="btn btn-outline-dark" onClick={() => updatepokemon(pokemon, key)}>Renommer</button>
-                                        <button type="button" className="btn btn-outline-dark" onClick={() => deletepokemon(pokemon)}>Relâcher</button>
+                                        <button type="button" className="btn btn-outline-dark" onClick={() => {updatepokemon(pokemon, key); setcount(count+1)}}>Renommer</button>
+                                        <button type="button" className="btn btn-outline-dark" onClick={() => {deletepokemon(pokemon); setcount(count+1)}}>Relâcher</button>
                                     </div>
                                 </div>
                         })}
