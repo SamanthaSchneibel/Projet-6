@@ -87,7 +87,7 @@ p{
 
 /*for the pokedex page*/
 .bloc{
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   border-radius: 10px;
 }
 
@@ -101,4 +101,54 @@ p{
 .avatar-pixel{
   height: 100px;
   width: 100px;
+}
+
+.container-dashboard{
+  display: flex;
+  justify-content: center;
+}
+
+.title-modif h2{
+  text-align: center;
+}
+
+.dashboard-list{
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.form-create{
+  background-color: #d9d9d9 !important;
+  border-radius: 10px;
+  color: #424242;
+  margin: 10px;
+  text-align: center;
+  width: 430px;
+}
+
+.form-create h2{
+  color: #424242;
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.radio-create input{
+  margin: 10px;
+}
+
+.form-create button{
+  font-family: "Press Start 2P", cursive;
+  color: #212121;
+  background-color: #db3646;
+  border-radius: 10px;
+}
+
+.bloc-dashboard h2{
+  color: #ffffff;
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 10px;
+  font-weight: bold;
 }

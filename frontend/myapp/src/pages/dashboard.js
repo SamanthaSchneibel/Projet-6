@@ -7,8 +7,8 @@ import { Dashboardpoke } from "../components/dashboardpoke";
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Permanent+Marker&family=Press+Start+2P&display=swap" rel="stylesheet" />
 </head>
 
-function Dashboard() {
-    return <div><Navbar />
+function Dashboard(){
+    return <div className="title-modif"><Navbar />
         <div className="container-dashboard">
             <h1>Dashboard</h1>
         </div>
