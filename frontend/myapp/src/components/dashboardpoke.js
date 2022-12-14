@@ -19,25 +19,10 @@ export function Dashboardpoke() {
             .catch(error => console.error("Erreur avec notre API :", error.message));
     }, [count]);
     return <div className="dashboard-list">
-        <div className="flex"> {
-            pokemons.map((pokemon, key) => {
-                return <div key={key} className="bloc-dashboard">
-                    <img className="avatar" src={pokemon.img1} alt="" />
-                    <img className="avatar-pixel" src={pokemon.img2} alt="" />
-                    <img className="type" src={pokemon.type} alt="" />
-                    <img className="type2" src={pokemon.type2} alt="" />
-                    <h2>{pokemon._id}<br />Numéro du pokedex: {pokemon.num} <br />Nom: {pokemon.name} <br /> Description: {pokemon.description}</h2>
-                    <input type="text" id={key} name="Nom" />
-                    <button onClick={() =>  {updatepokemonnameDash(pokemon, key); setcount(count+1)}}>Changer le nom du pokemon</button>
-                    <button onClick={() =>  {deletepokemonDash(pokemon); setcount(count+1)}}>Supprimer le pokemon</button>
-                </div>
-            })}
-
-        </div>
         <form onSubmit={handleSubmit(onSubmit)}>
-            <br/>
-            <br/>
-            <br/>
+            <br />
+            <br />
+            <br />
             <p>
                 <h2>Choisir le numéro du pokémon (ex: #000) : </h2>
                 <input {...register("num", { required: true })} placeholder="Numéro du pokemon" />
@@ -102,6 +87,22 @@ export function Dashboardpoke() {
             </p>
             <button type="submit">Créer</button>
         </form>
+        <div className="flex"> {
+            pokemons.map((pokemon, key) => {
+                return <div key={key} className="bloc-dashboard">
+                    <img className="avatar" src={pokemon.img1} alt="" />
+                    <img className="avatar-pixel" src={pokemon.img2} alt="" />
+                    <img className="type" src={pokemon.type} alt="" />
+                    <img className="type2" src={pokemon.type2} alt="" />
+                    <h2>{pokemon._id}<br />Numéro du pokedex: {pokemon.num} <br />Nom: {pokemon.name} <br /> Description: {pokemon.description}</h2>
+                    <input type="text" id={key} name="Nom" />
+                    <button onClick={() => { updatepokemonnameDash(pokemon, key); setcount(count + 1) }}>Changer le nom du pokemon</button>
+                    <button onClick={() => { deletepokemonDash(pokemon); setcount(count + 1) }}>Supprimer le pokemon</button>
+                </div>
+            })}
+
+        </div>
+
         ;
     </div>;
 
