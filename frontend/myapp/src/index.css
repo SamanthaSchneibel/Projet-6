@@ -103,6 +103,7 @@ p{
   width: 100px;
 }
 
+/*for the dashboard page*/
 .container-dashboard{
   display: flex;
   justify-content: center;
@@ -151,4 +152,5 @@ p{
   font-family: 'Courier New', Courier, monospace;
   margin: 10px;
   font-weight: bold;
+  text-align: left;
 }
